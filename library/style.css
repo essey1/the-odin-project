@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 2.5em;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+div {
+    min-height: 40vh;
+    min-width: 45vw;
+}
+
+footer {
+    margin-bottom: 2em;
+}
