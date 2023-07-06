@@ -4,23 +4,60 @@
 
 body {
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-h1 {
-    margin-bottom: 2.5em;
+h1,
+h2 {
+    margin-bottom: 1em;
 }
 
-main {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.book-button {
+    padding: .5em 1em;
+    font-size: 1.25rem;
+    margin: 1em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-div {
-    min-height: 40vh;
-    min-width: 45vw;
+.book-button:hover {
+    opacity: .75;
+}
+
+.book-form {
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: rgb(171, 171, 171);
+}
+
+.input {
+    display: block;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 0 .5em;
+    margin-bottom: 1em;
+}
+
+.add-book {
+    padding: 0 .5em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    color: rgb(68, 68, 68);
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: .5em;
+}
+
+.add-book:hover {
+    opacity: .75;
+}
+
+.card {
+    max-width: 350px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background-color: rgb(238, 238, 238);
 }
 
 footer {
-    margin-bottom: 2em;
+    margin: 5em 0;
+    font-size: 1.1rem;
 }
