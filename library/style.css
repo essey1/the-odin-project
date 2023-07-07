@@ -7,15 +7,15 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-h1,
-h2 {
-    margin-bottom: 1em;
+h1 {
+    margin: 1em;
+    font-weight: 600;
 }
 
 .book-button {
     padding: .5em 1em;
     font-size: 1.25rem;
-    margin: 1em;
+    margin: 0 1em 1em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
