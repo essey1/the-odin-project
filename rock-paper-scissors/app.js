@@ -10,4 +10,23 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+// 
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection == 'rock' && computerSelection == 'paper') {
+        return 'Computer wins! paper beats rock';
+    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+        return 'Player wins! paper beats rock';
+    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+        return 'Player wins! rock beats scissors';
+    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+        return 'Computer wins! rock beats scissors';
+    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+        return 'Computer wins! scissors beats paper';
+    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+        return 'Player wins! scissors beats paper';
+    }
+}
+
+const playerSelection = 'paper';
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
