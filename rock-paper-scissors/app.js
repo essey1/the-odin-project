@@ -10,23 +10,51 @@ function getComputerChoice() {
     }
 }
 
-// 
+// Compares the values and increments the value of the winner by one
+let playerScore = 0
+let computerScore = 0
+const computerSelection = getComputerChoice();
+
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection == 'rock' && computerSelection == 'paper') {
+
+    if (playerSelection === 'rock' && computerSelection === 'paper') {
+        ++computerScore;
         return 'Computer wins! paper beats rock';
-    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        ++playerScore;
         return 'Player wins! paper beats rock';
-    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        ++playerScore;
         return 'Player wins! rock beats scissors';
-    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        ++computerScore;
         return 'Computer wins! rock beats scissors';
-    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        ++computerScore;
         return 'Computer wins! scissors beats paper';
-    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        ++playerScore;
         return 'Player wins! scissors beats paper';
+    } else {
+        return 'You tied'
     }
 }
 
-const playerSelection = 'paper';
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+// Executes the game for five rounds and return the winner
+function game() {
+    for (i = 0; i < 5; ++i) {
+        console.log(playRound(prompt("choose from rock, paper and scissors",''), computerSelection));
+    }
+
+    if (playerScore > computerScore) {
+        return "You Win the game!!!";
+    }else if (playerScore < computerScore) {
+        return "You Lost the game to a computer!";
+    }else {
+        return "It's a Draw!";
+    }
+}
+
+console.log(game());
+
+
