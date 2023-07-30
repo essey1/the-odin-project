@@ -13,7 +13,6 @@ function getComputerChoice() {
 // Compares the values and increments the value of the winner by one
 let playerScore = 0
 let computerScore = 0
-const computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
 
@@ -42,8 +41,9 @@ function playRound(playerSelection, computerSelection) {
 
 // Executes the game for five rounds and return the winner
 function game() {
-    for (i = 0; i < 5; ++i) {
-        console.log(playRound(prompt("choose from rock, paper and scissors",''), computerSelection));
+    
+    for (i=0; i<5; ++i) {
+        console.log(playRound(prompt("choose from rock, paper and scissors",''), getComputerChoice()));
     }
 
     if (playerScore > computerScore) {
