@@ -11,8 +11,10 @@ function getComputerChoice() {
 }
 
 // Compares the values and increments the value of the winner by one
-let playerScore = 0
-let computerScore = 0
+let playerScore = 0;
+let computerScore = 0;
+
+let playerSelection;
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
@@ -35,23 +37,27 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         ++playerScore;
         return 'Player wins! scissors beats paper';
+    } else if (playerSelection === computerSelection)  {
+        return 'It`s a tie';
     } else {
-        return 'You tied'
+        ++computerScore;
+        return 'Computer wins! because ' + playerSelection + ' is invalid';
     }
 }
 
 // Executes the game for five rounds and return the winner
 function game() {
-    
     for (i=0; i<5; ++i) {
-        console.log(playRound(prompt("choose from rock, paper and scissors, and open the console to see your results"), getComputerChoice()));
+        console.log(
+            playRound(prompt("choose from rock, paper and scissors 5 times, and open the console by right clicking and clicking inspect to see your results"), 
+                getComputerChoice()));
     }
 
     if (playerScore > computerScore) {
-        return "You Won the game " + playerScore + " - " + computerScore;
-    }else if (playerScore < computerScore) {
-        return "You Lost the game " + computerScore + " - " + playerScore;
-    }else {
+        return "You Won The Game " + playerScore + " - " + computerScore;
+    } else if (playerScore < computerScore) {
+        return "You Lost The Game " + computerScore + " - " + playerScore;
+    } else {
         return "It's a Draw!";
     }
 }
