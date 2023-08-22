@@ -43,7 +43,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     
     for (i=0; i<5; ++i) {
-        console.log(playRound(prompt("choose from rock, paper and scissors",''), getComputerChoice()));
+        console.log(playRound(prompt("choose from rock, paper and scissors, and open the console to see your results",''), getComputerChoice()));
     }
 
     if (playerScore > computerScore) {
