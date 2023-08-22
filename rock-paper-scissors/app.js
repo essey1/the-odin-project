@@ -15,6 +15,7 @@ let playerScore = 0
 let computerScore = 0
 
 function playRound(playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
 
     if (playerSelection === 'rock' && computerSelection === 'paper') {
         ++computerScore;
@@ -43,13 +44,13 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     
     for (i=0; i<5; ++i) {
-        console.log(playRound(prompt("choose from rock, paper and scissors, and open the console to see your results",''), getComputerChoice()));
+        console.log(playRound(prompt("choose from rock, paper and scissors, and open the console to see your results"), getComputerChoice()));
     }
 
     if (playerScore > computerScore) {
-        return "You Win the game!!!";
+        return "You Won the game " + playerScore + " - " + computerScore;
     }else if (playerScore < computerScore) {
-        return "You Lost the game to a computer!";
+        return "You Lost the game " + computerScore + " - " + playerScore;
     }else {
         return "It's a Draw!";
     }
