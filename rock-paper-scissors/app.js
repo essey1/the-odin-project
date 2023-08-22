@@ -38,10 +38,10 @@ function playRound(playerSelection, computerSelection) {
         ++playerScore;
         return 'Player wins! scissors beats paper';
     } else if (playerSelection === computerSelection)  {
-        return 'It`s a tie';
+        return "It's a tie";
     } else {
         ++computerScore;
-        return 'Computer wins! because ' + playerSelection + ' is invalid';
+        return 'Computer wins! because "' + playerSelection + '" is invalid';
     }
 }
 
@@ -58,7 +58,7 @@ function game() {
     } else if (playerScore < computerScore) {
         return "You Lost The Game " + computerScore + " - " + playerScore;
     } else {
-        return "It's a Draw!";
+        return "It's a " + playerScore + " - " + computerScore + " Draw";
     }
 }
 
