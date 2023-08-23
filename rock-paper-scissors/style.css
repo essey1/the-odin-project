@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Sedgwick+Ave+Display&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: 'Lobster', cursive;
+    letter-spacing: .1em;
+}
+
+h2 {
+    text-align: center;
+    padding: .25rem;
+    margin-bottom: 1em;
+    font-size: 1.75rem;
+}
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 1.375rem;
+    }
+}
+
+@media (min-width: 500px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+button {
+    margin: .5em;
+    width: 140px;
+}
+
+img {
+    width: 45px;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    margin-block: 1em;
+}
+
+#scores,
+#result {
+    text-align: center;
+    margin-top: .5rem;
+}
+
+#result {
+    font-size: 1.5rem;
+}
