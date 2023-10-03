@@ -69,7 +69,7 @@ playButtons.forEach(button => {
     // Announces whether the user have won or lost the game based on who reached a score of 5 first
     result.textContent = ""
     if (computerScore.textContent == 5) {
-        result.textContent = "You've Lost The Game " + computerScore.textContent + " - " + playerScore.textContent;
+        result.textContent = "You've Lost The Game " + playerScore.textContent + " - " + computerScore.textContent;
         computerScore.textContent = 0
         playerScore.textContent = 0
     } else if(playerScore.textContent == 5) {
