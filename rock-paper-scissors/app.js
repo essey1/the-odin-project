@@ -17,7 +17,6 @@ let computerScore = 0;
 let playerSelection;
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
 
     if (playerSelection === 'rock' && computerSelection === 'paper') {
         ++computerScore;
@@ -45,23 +44,32 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// Executes the game for five rounds and return the winner
-function game() {
-    for (i=0; i<5; ++i) {
-        console.log(
-            playRound(prompt("choose from rock, paper and scissors 5 times, and open the console by right clicking and clicking inspect to see your results"), 
-                getComputerChoice()));
-    }
+const playButtons = document.querySelectorAll("#button");
 
-    if (playerScore > computerScore) {
-        return "You Won The Game " + playerScore + " - " + computerScore;
-    } else if (playerScore < computerScore) {
-        return "You Lost The Game " + computerScore + " - " + playerScore;
-    } else {
-        return "It's a " + playerScore + " - " + computerScore + " Draw";
-    }
-}
+playButtons.forEach(button => {
+  const buttonValue = button.getAttribute("value");
+  button.addEventListener("click", () => {
+    console.log(playRound(buttonValue, getComputerChoice()));
+  });
+});
 
-console.log(game());
+// // Executes the game for five rounds and return the winner
+// function game() {
+//     for (i=0; i<5; ++i) {
+//         console.log(
+//             playRound(prompt("choose from rock, paper and scissors 5 times, and open the console by right clicking and clicking inspect to see your results"), 
+//                 getComputerChoice()));
+//     }
+
+//     if (playerScore > computerScore) {
+//         return "You Won The Game " + playerScore + " - " + computerScore;
+//     } else if (playerScore < computerScore) {
+//         return "You Lost The Game " + computerScore + " - " + playerScore;
+//     } else {
+//         return "It's a " + playerScore + " - " + computerScore + " Draw";
+//     }
+// }
+
+// console.log(game());
 
 
