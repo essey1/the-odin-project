@@ -1,4 +1,4 @@
-Play a rock paper scissors game against a computer.<br><br>
+Play a rock paper scissors game against a computer.<br>
 
 Here is the link: [https://essey1.github.io/the-odin-project/rock-paper-scissors](https://essey1.github.io/the-odin-project/rock-paper-scissors) <br>
 
