@@ -11,35 +11,49 @@ function getComputerChoice() {
 }
 
 // Compares the values and increments the value of the winner by one
-let playerScore = 0;
-let computerScore = 0;
+let playerScore = document.getElementById("playerScore");
+let computerScore = document.getElementById("computerScore");
 
 let playerSelection;
 
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === 'rock' && computerSelection === 'paper') {
-        ++computerScore;
+        let currentScore = Number(computerScore.textContent);
+        currentScore++;
+        computerScore.textContent = currentScore;
         return 'Computer wins! paper beats rock';
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        ++playerScore;
+        let currentScore = Number(playerScore.textContent);
+        currentScore++;
+        playerScore.textContent = currentScore;
         return 'Player wins! paper beats rock';
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        ++playerScore;
+        let currentScore = Number(playerScore.textContent);
+        currentScore++;
+        playerScore.textContent = currentScore;
         return 'Player wins! rock beats scissors';
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        ++computerScore;
+        let currentScore = Number(computerScore.textContent);
+        currentScore++;
+        computerScore.textContent = currentScore;
         return 'Computer wins! rock beats scissors';
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        ++computerScore;
+        let currentScore = Number(computerScore.textContent);
+        currentScore++;
+        computerScore.textContent = currentScore;
         return 'Computer wins! scissors beats paper';
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        ++playerScore;
+        let currentScore = Number(playerScore.textContent);
+        currentScore++;
+        playerScore.textContent = currentScore;
         return 'Player wins! scissors beats paper';
     } else if (playerSelection === computerSelection)  {
         return "It's a tie";
     } else {
-        ++computerScore;
+        let currentScore = Number(computerScore.textContent);
+        currentScore++;
+        computerScore.textContent = currentScore;
         return 'Computer wins! because "' + playerSelection + '" is invalid';
     }
 }
@@ -49,7 +63,7 @@ const playButtons = document.querySelectorAll("#button");
 playButtons.forEach(button => {
   const buttonValue = button.getAttribute("value");
   button.addEventListener("click", () => {
-    console.log(playRound(buttonValue, getComputerChoice()));
+    playRound(buttonValue, getComputerChoice());
   });
 });
 
