@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 2px;
+    width: 400px;
+    height: 400px;
+    background-color: #ddd;
+}
+
+.grid-item {
+    background-color: #333;
+    width: 16px;
+    height: 16px;
+}
