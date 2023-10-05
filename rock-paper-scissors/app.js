@@ -24,12 +24,12 @@ function playRound(playerSelection, computerSelection) {
         let currentPlayerScore = Number(playerScore.textContent);
         currentPlayerScore++;
         playerScore.textContent = currentPlayerScore;
-        return 'Player wins! paper beats rock';
+        return 'You win! paper beats rock';
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         currentPlayerScore = Number(playerScore.textContent);
         currentPlayerScore++;
         playerScore.textContent = currentPlayerScore;
-        return 'Player wins! rock beats scissors';
+        return 'You win! rock beats scissors';
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         currentComputerScore = Number(computerScore.textContent);
         currentComputerScore++;
@@ -44,7 +44,7 @@ function playRound(playerSelection, computerSelection) {
         currentPlayerScore = Number(playerScore.textContent);
         currentPlayerScore++;
         playerScore.textContent = currentPlayerScore;
-        return 'Player wins! scissors beats paper';
+        return 'You win! scissors beats paper';
     } else if (playerSelection === computerSelection)  {
         return "It's a tie, try again!";
     } else {
