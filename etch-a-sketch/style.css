@@ -13,14 +13,13 @@ body{
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
-    gap: 2px;
-    width: 400px;
-    height: 400px;
-    background-color: #ddd;
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    border: 2px solid #000;
 }
 
 .grid-item {
-    background-color: #333;
-    width: 16px;
-    height: 16px;
+    width: 37px;
+    height: 37px;
 }

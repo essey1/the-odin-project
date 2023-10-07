@@ -8,3 +8,16 @@ for (let i = 0; i < 16; i++) {
         gridContainer.appendChild(gridItem);
     }
 }
+
+// Changes the grid-items color when the mouse passes over them
+const gridItems = document.querySelectorAll('.grid-item');
+
+gridItems.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      item.style.backgroundColor = 'black';
+    });
+  
+    item.addEventListener('mouseleave', () => {
+      item.style.backgroundColor = 'black';
+    });
+  });
